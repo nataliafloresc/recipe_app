@@ -1,0 +1,15 @@
+<div class = 'row'>
+	<div class= 'col-md-10'>
+
+<%= simple_form_for @recipe, html: { class: 'form-horizontal'} do |form| %>
+	<%= form.input :name, label: 'Recipe name' %> <br>
+	<%= form.input :difficulty_level, lable: 'Difficulty level' %> <br>
+	<%= form.input :preparation_time, lable: 'preparation time' %> <br> <br> <br>
+	<%= form.input :ingredients, lable: 'please list all ingredients' %> <br> <br>
+	<%= form.input :directions, lable: 'directions' %> <br>
+
+	<%= form.submit 'share recipe', class: 'btn btn-primary' %>
+<% end %>
+
+	</div>
+</div>
