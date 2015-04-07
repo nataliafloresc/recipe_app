@@ -1,0 +1,13 @@
+<h2> <%= "#{@category.name} Recipes" %> </h2> <br>
+<% @recipes.each do |recipe| %>
+	<h4>  Recepie name: </h4> <h4> <%= recipe.name %> </h4>
+	<h5> Preparation Time:</h5> <%= recipe.preparation_time %> min <br>
+	<h5> Difficulty level: </h5> <%= recipe.difficulty_level %> <br>
+	<h5> Ingredients: </h5> <%= recipe.ingredients %> <br>
+	<h5> Directions: </h5> <%= recipe.directions %> <br>
+	<h5> Image: </h5> <%= image_tag recipe.photo, size: '300x300' %> <br>
+	<h5> Category: </h5> <%= recipe.category.name %>
+	<br>
+<hr>
+<% end %>
+

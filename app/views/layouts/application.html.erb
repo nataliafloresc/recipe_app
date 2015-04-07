@@ -45,12 +45,20 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">RecipeApp</a>
+        <a class="navbar-brand" href="#">Cook It</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to "All recipes", recipes_path   %></li>
+            <li><%= link_to "My recipe book", my_recipes_path   %></li>
+            <li><%= link_to "Create a new recipe", new_recipe_path  %></li>
+            <%= drop_down "Search" do %>
+              <% @categories.each do |category| %>
+                <%= menu_item category.name, category_path(category) %>
+                <% end %>
+
+          <% end %>
+            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </li>
+
           </ul>
         </div>
       </div>
@@ -70,9 +78,7 @@
         </div><!--/span-->
       </div><!--/row-->
 
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
+
 
     </div> <!-- /container -->
 
