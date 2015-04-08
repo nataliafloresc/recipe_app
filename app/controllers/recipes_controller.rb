@@ -34,7 +34,6 @@ class RecipesController < ApplicationController
  		@recipe = Recipe.find(params[:id])
  		@recipe.delete
  		redirect_to recipes_path
-
  	end 
 
  	def recipe_params

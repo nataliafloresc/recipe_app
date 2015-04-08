@@ -14,22 +14,102 @@
  *= require_self
  */
 
+ header{
+    font-size: 50px;
+    position: relative;
+    left: 7%;
+    font-family: 'Raleway', sans-serif;
+
+ }
+
+ h3{
+    font-family: 'Raleway', sans-serif;
+ }
+
+ h1{
+    font-family: 'Raleway', sans-serif;
+ }
+
+ h2{
+    font-family: 'Raleway', sans-serif;
+ }
+
+ h4{
+    font-family: 'Raleway', sans-serif;
+ }
+
+.navagation-bar{
+    font-family: 'Raleway', sans-serif;
+}
+
 .new-recipe {
 	position: center;
 }
 
 .display-recipe {
-	text-align: center;
+	text-align: justify;
 	border-style: solid;
-    border-width: 3px;
-    padding: 3px;
+    border-width: 1.5px;
+    background-color: #EFEFF0;
+    padding: 5px;
+    padding-left: 25px;
     margin: 2px;
+    border-radius: 1%;
     display: block;
     position: relative;
     left: 120px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .recipe_name {
 	text-decoration: underline;
 	display: inline-block;
+}
+
+.sign_up_form{
+    position: fixed;
+    left: 420px;
+    text-align: justify;
+    font-size: 10pt;
+    line-height: 100%;
+    border: solid;
+    border-radius: 3%;
+    padding: 20px;
+    margin: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.sign_up{
+    text-align: center;
+}
+
+.sign_in_form{
+    font-family: 'Raleway', sans-serif;
+    position: fixed;
+    left: 200px;
+}
+
+.new_recipe_form{
+    font-family: 'Raleway', sans-serif;
+}
+
+.share_recipe{
+    position: fixed;
+    left: 740px;
+    top: 500px ;
+}
+
+.category_recipes{
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+    border-style: solid;
+    border-width: 1.5px;
+    background-color: #EFEFF0;
+    padding: 5px;
+    padding-left: 25px;
+    margin: 2px;
+    border-radius: 1%;
+    display: block;
+    position: relative;
+    left: 120px;
 }

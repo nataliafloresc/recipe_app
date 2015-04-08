@@ -1,11 +1,11 @@
-<h2> All recipes </h2>
+<h3> All recipes </h3>
 
 
 
 <% @recipes.each do |print| %>
 
 	<div class = "display-recipe">
-	<h3>  Recepie name: </h3> <div class = 'recipe_name'> <h4> <%= print.name %> </h4> </div>
+	<div class = 'recipe_name'> <h2> <%= print.name %> </h2> </div>
 	<h5> Preparation Time:</h5> <%= print.preparation_time %> min <br>
 	<h5> Difficulty level: </h5> <%= print.difficulty_level %> <br>
 	<h5> Ingredients: </h5> <%= print.ingredients %> <br>
@@ -13,6 +13,7 @@
 	<h5> Image: </h5> <%= image_tag print.photo, size: '300x300' %> <br>
 	<h5> Category: </5> <%= print.category.try(:name) %>
 	<h5> Created By: </h5> <%= print.try(:user).try(:email) %>
+	<br>
 	<br>
 
 	<%= button_to 'delete recipe', recipe_path(print), method: :delete %>

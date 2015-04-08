@@ -1,27 +1,29 @@
-<div class = 'new-recipe'> <h2> New Recipe </h2> </div>
 
+<div class = 'new-recipe'> <h3> New Recipe </h3> </div>
+
+<div class = 'new_recipe_form'>
 
 <br>
 <br>
 
-<div class = 'row'>
-	<div class= 'col-md-6'>
+<div class = 'conteiner'>
+	<div class= 'col-md-3'>
 		<%= simple_form_for @recipe, html: { class: 'form-horizontal'} do |form| %>
 	</div>
 </div>
 
 	<div class = 'conteiner'>
-		<div class= 'col-md-6'>		
-			<%= form.input :name, label: 'Recipe name' %> <br>
+		<div class= 'col-md-3'>		
+			<%= form.input :name, label: 'Recipe name' %> <br><br>
 			<%= form.input :difficulty_level, label: 'Difficulty level' %> <br>
-			<%= form.input :preparation_time, label: 'preparation time' %> <br> <br> <br>
+			<%= form.input :preparation_time, label: 'Preparation time (min)' %> <br> <br> <br>
 </div>
 </div>
 
 <div class = 'conteiner'>
-	<div class= 'col-md-6'>
-		<%= form.input :ingredients, label: 'list all ingredients' %> <br> <br>
-		<%= form.input :directions, label: 'directions' %> <br>
+	<div class= 'col-md-3'>
+		<%= form.input :ingredients, label: 'List all ingredients' %> <br> <br>
+		<%= form.input :directions, label: 'Directions' %> <br>
 		<%= form.association :category, :include_blank => false %> <br>
 			
 	</div>
@@ -30,9 +32,10 @@
 		
 
 <div class = 'conteiner'>
-	<div class= 'col-md-6'>	
-			<%= form.input :photo, label: 'Photo File' %> <br>
-			<%= form.submit 'SHARE RECIPE', class: 'btn btn-primary' %> <br><br><br>
+	<div class= 'col-md-3'>	
+			<%= form.input :photo, label: 'Photo File' %> 
+			<div class = 'share_recipe'> <%= form.submit 'SHARE RECIPE', class: 'btn btn-primary' %> <br><br><br> </div>
 		<% end %>
 	</div>
+</div>
 </div>

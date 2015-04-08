@@ -1,4 +1,8 @@
 <h2> <%= "#{@category.name} Recipes" %> </h2> <br>
+
+<div class = 'category_recipes'>
+
+
 <% @recipes.each do |recipe| %>
 	<h4>  Recepie name: </h4> <h4> <%= recipe.name %> </h4>
 	<h5> Preparation Time:</h5> <%= recipe.preparation_time %> min <br>
@@ -8,6 +12,6 @@
 	<h5> Image: </h5> <%= image_tag recipe.photo, size: '300x300' %> <br>
 	<h5> Category: </h5> <%= recipe.category.name %>
 	<br>
-<hr>
 <% end %>
 
+</div>
